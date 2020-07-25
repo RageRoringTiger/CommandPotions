@@ -16,7 +16,7 @@ particle-config: #Change particle offset/intensity/rate. (Only works with the pa
   count: 20 #(intensity)
   rate: 20 #In ticks, how fast particles spawn.
 
-potions: #Potions (duh...)
+potions: #This is where you make command potions.
   DO-NOT-REMOVE: Please do not remove this or it will break the plugin.
   default: #Potion name (Used in game -> /cpot <potion name> )
     display-name: "&b&lTest" #What the potion name looks like in game. YOU MUST PUT THE NAME IN QUOTES - "" - TO USE THE & SYMBOL!
