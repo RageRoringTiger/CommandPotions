@@ -1,0 +1,48 @@
+package me.rageroringtiger.commandpotion.listeners;
+
+import me.rageroringtiger.commandpotion.CommandPotion;
+import me.rageroringtiger.commandpotion.tasks.ParticleSpawnerTask;
+import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerItemConsumeEvent;
+import org.bukkit.plugin.Plugin;
+import org.bukkit.scheduler.BukkitRunnable;
+import org.bukkit.scheduler.BukkitTask;
+
+public class PlayerDrinkPotion implements Listener {
+    private Plugin plugin = CommandPotion.getPlugin(CommandPotion.class);
+    @EventHandler
+    public void onPlayerDrinkPotion(PlayerItemConsumeEvent e){
+        Player p = e.getPlayer();
+        for (String key : plugin.getConfig().getConfigurationSection("potions").getKeys(false)){
+            Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "say " + key);
+            String potion = "potions." + key;
+            if (!key.equals("DO-NOT-REMOVE")) {
+                String potionName = plugin.getConfig().getString(potion + ".display-name");
+                Bukkit.getServer().dispatchCommand(Bukkit.getServer().getConsoleSender(), "say It worked! I think...");
+                if (e.getItem().getItemMeta().getDisplayName().equals(plugin.getConfig().getString(potion + ".display-name"))){
+                    p.sendMessage("It worked. Maybe?");
+                    for (String command : plugin.getConfig().getStringList(potion + ".command-on-drink")){
+                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), command.replace("{player}", p.getName()));
+                    }
+                    if (!plugin.getConfig().getBoolean(potion + ".empty-after-drink")){
+                        p.getInventory().getItemInMainHand().setAmount(0);
+                        p.getInventory().addItem(e.getItem());
+                    }
+                    p.sendMessage("Spawning Particles");
+
+                    BukkitTask task = new ParticleSpawnerTask(p, potion).runTaskTimerAsynchronously(plugin, 0L, plugin.getConfig().getLong("particle-config.rate"));
+
+                    Bukkit.getScheduler().scheduleSyncDelayedTask(plugin, () -> {
+                        for (String command : plugin.getConfig().getStringList(potion + ".command-on-expire")){
+                            Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), command.replace("{player}", p.getName()));
+                        }
+                        task.cancel();
+                    }, plugin.getConfig().getLong(potion + ".time"));
+                }
+            }
+        }
+    }
+}

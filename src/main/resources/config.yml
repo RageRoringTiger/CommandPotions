@@ -1,0 +1,45 @@
+# <----------------------------->
+#        Command Potions
+#   Created by RageRoringTiger
+#
+#  (Please don't remove this!)
+# <----------------------------->
+
+main-config: #Main settings
+  show-time-left: true #If true gives the player the luck effect (which does nothing) to show how long until the potion will run out. (Will only show the latest potion)
+  ambient: true #If false will show particles from the luck effect
+
+particle-config: #Change particle offset/intensity/rate. (Only works with the particle from the potion, not the luck effect)
+  offset-x: 0.5
+  offset-y: 0.5
+  offset-z: 0.5
+  count: 20 #(intensity)
+  rate: 20 #In ticks, how fast particles spawn.
+
+potions: #Potions (duh...)
+  DO-NOT-REMOVE: Please do not remove this or it will break the plugin.
+  default: #Potion name (Used in game -> /cpot <potion name> )
+    display-name: "&b&lTest" #What the potion name looks like in game. YOU MUST PUT THE NAME IN QUOTES - "" - TO USE THE & SYMBOL!
+    color: RED #Potion color, options: aqua, black, blue, fuchsia, gray, green, lime, maroon, navy, olive, orange, purple, red, silver, teal, white, yellow.
+    custom-model-data: -1 #Disabled when set to -1
+    particle: CRIT #Doesn't use potion particles, uses ALL particles. You can see a full list here:https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Particle.html
+    empty-after-drink: true #Whether the potion is empty after drinking the potion. If set to false, after drinking the potion it will immediately replenishes.
+    time: 200 #How many ticks it takes before the potion effect expires.
+    command-on-drink: #The command(s) that is given upon drinking the potion. Run through console. {player} is the player who drank the potion. (Must have at least one command - can be not an actual command, ex. - thisisnotarealcommand )
+      - say This is the first command!
+      - msg {player} You're the player that drank the potion!
+    command-on-expire: #The command(s) that is ran upon the potion running out. (Must have at least one command - can be not an actual command, ex. - thisisnotarealcommand )
+      - say This command was run after the potion ran out!
+      - msg {player} Your command potion ran out.
+  ex2:
+    display-name: "&cEX2"
+    color: black
+    custom-model-data: -1
+    particle: SMOKE_NORMAL
+    empty-after-drink: false
+    time: 150
+    command-on-drink:
+      - kick {player}
+    command-on-expire:
+      - msg {player} Hello
+      - kill {player}

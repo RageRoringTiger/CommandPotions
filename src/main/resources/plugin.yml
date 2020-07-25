@@ -1,0 +1,9 @@
+name: CommandPotion
+version: ${project.version}
+main: me.rageroringtiger.commandpotion.CommandPotion
+api-version: 1.13
+authors: [RageRoringTiger]
+description: Create potions that give players commands.
+commands:
+  cpot:
+    description: Create and give players command potions.
