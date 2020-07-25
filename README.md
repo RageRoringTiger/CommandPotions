@@ -18,7 +18,9 @@ To spawn in a potion a player need the permission *commandpotions.createpotion*.
 # Configuration
 ## Main Configuration Info
 All of the plugin configuration is done through a simple config:
+
 ![Config Image](/images/config.png/)
+
 
 ## Configuration Explained
 * main-config #Main settings
@@ -50,3 +52,6 @@ All of the plugin configuration is done through a simple config:
 
 # Miscellaneous
 Thanks for checking out my plugin :)
+
+# Download
+[VERSION 1.0](/RageRoringTiger/CommandPotions/raw/master/compiled/CommandPotions.jar)
