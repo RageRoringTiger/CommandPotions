@@ -7,12 +7,10 @@ This plugin let's you create potions that when they are drank by a player, run c
 
 ## Commands
 There are only 2 commands you need to know:
-<hr
-* /cpot *potion* *player*
-  * If *player* is not set, then the potion will be given to the command sender (player who typed the command).
-* /cpot reload
-  * Reload the plugin config.
-/>
+<hr /cpot *potion* *player*>
+If *player* is not set, then the potion will be given to the command sender (player who typed the command)
+<hr /cpot reload>
+Reload the plugin config.
 
 ## Permissions
 To spawn in a potion a player need the permission *commandpotions.createpotion*. __Any__ player can drink a potion to run commands.
@@ -25,7 +23,6 @@ All of the plugin configuration is done through a simple config:
 
 
 ## Configuration Explained
-<hr
 * main-config #Main settings
   *show-time-left: #If true gives the player the luck effect (which does nothing) to show how long until the potion will run out. (Will only show the latest potion)
   *ambient: #If false will show particles from the luck effect
@@ -39,7 +36,7 @@ All of the plugin configuration is done through a simple config:
 
 * potions: #This is where you make command potions.
   * DO-NOT-REMOVE: #This is help the plugin locate your custom potions
-  * <potion-name>: #Potion name (Used in game -> /cpot <potion name> )
+  * _potion-name_: #Potion name (Used in game -> /cpot _potion name_ )
     * display-name: #What the potion name looks like in game.
     * color: #What color your potion will be.
     * custom-model-data: #Set the potion custom model data, disabled when set to -1
@@ -52,7 +49,6 @@ All of the plugin configuration is done through a simple config:
     * command-on-expire: #The command(s) that are run when the potion runs out. {player} is replaced with the player who drank the potion.
       * (EX) say The potion has run out
       * (EX) kill {player}
-/>
 
 # Miscellaneous
 Thanks for checking out my plugin :)
