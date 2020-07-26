@@ -1,3 +1,4 @@
+[**Top**](https://github.com/RageRoringTiger/CommandPotions/blob/master/README.md#commandpotions)[Main Info](https://github.com/RageRoringTiger/CommandPotions/blob/master/README.md#main-info)[Commands](https://github.com/RageRoringTiger/CommandPotions/blob/master/README.md#commands)[Permissions](https://github.com/RageRoringTiger/CommandPotions/blob/master/README.md#permissions)[**Configuration**](https://github.com/RageRoringTiger/CommandPotions/blob/master/README.md#configuration)[Main Configuration Info](https://github.com/RageRoringTiger/CommandPotions/blob/master/README.md#main-configuration-info)[Configuration Explained](https://github.com/RageRoringTiger/CommandPotions/blob/master/README.md#configuration-explained)[**Miscellaneous**](https://github.com/RageRoringTiger/CommandPotions/blob/master/README.md#miscellaneous)[Credits/Thanks](https://github.com/RageRoringTiger/CommandPotions/blob/master/README.md#creditsthanks)[To-Do](https://github.com/RageRoringTiger/CommandPotions/blob/master/README.md#to-do)[Downloads](https://github.com/RageRoringTiger/CommandPotions/blob/master/README.md#downloads)
 # CommandPotions
 **Created by RageRoringTiger**
 
@@ -63,7 +64,7 @@ Thanks for checking out my plugin :)
 1. Add more command variables (like {player}).
 1. FIX BUGS.
 
-# Download
+# Downloads
 [RELEASE 1.0](https://github.com/RageRoringTiger/CommandPotions/raw/master/compiled/CommandPotions1-3.jar)
 
 [PRE-RELEASE 0.9](https://github.com/RageRoringTiger/CommandPotions/raw/master/compiled/CommandPotions1-2.jar)
