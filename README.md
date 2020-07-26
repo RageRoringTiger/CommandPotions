@@ -7,9 +7,9 @@ This plugin let's you create potions that when they are drank by a player, run c
 
 ## Commands
 There are only 2 commands you need to know:
-<hr /cpot *potion* *player*>
+> /cpot *potion* *player*
 If *player* is not set, then the potion will be given to the command sender (player who typed the command)
-<hr /cpot reload>
+> /cpot reload
 Reload the plugin config.
 
 ## Permissions
