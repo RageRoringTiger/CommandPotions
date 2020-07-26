@@ -23,7 +23,7 @@ All of the plugin configuration is done through a simple config:
 
 
 ## Configuration Explained
-* main-config #Main settings
+* main-config: #Main settings
   *show-time-left: #If true gives the player the luck effect (which does nothing) to show how long until the potion will run out. (Will only show the latest potion)
   *ambient: #If false will show particles from the luck effect
 
