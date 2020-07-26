@@ -60,7 +60,8 @@ All of the plugin configuration is done through a simple config:
 # Miscellaneous
 ## Credits/Thanks
 This plugin was made by RageRoringTiger and suggested by Xp10d3 on the [bukkit forms!](https://bukkit.org/threads/command-potions.487593/)
- Thanks for checking out my plugin :)
+
+Thanks for checking out my plugin :)
 
 ## To-Do
 1. Add lore to potions that shows what commands are run.
