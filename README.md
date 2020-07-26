@@ -42,7 +42,7 @@ All of the plugin configuration is done through a simple config:
 
  potions: #This is where you make command potions.
    DO-NOT-REMOVE: #This is help the plugin locate your custom potions
-   _potion-name_: #Potion name (Used in game -> /cpot _potion name_ )
+   potion-name: #Potion name (Used in game -> /cpot potion-name )
      display-name: #What the potion name looks like in game.
      color: #What color your potion will be.
      custom-model-data: #Set the potion custom model data, disabled when set to -1
