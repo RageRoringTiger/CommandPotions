@@ -20,6 +20,10 @@ public class CreatePotion implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player){
+            if (args[0].equalsIgnoreCase("reload")){
+                plugin.reloadConfig();
+                return false;
+            }
             if (sender.hasPermission("commandpotions.createpotion")) {
                 if (args.length >= 1) {
                     Player p = (Player) sender;
