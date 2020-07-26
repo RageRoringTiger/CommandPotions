@@ -12,6 +12,8 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
+import java.util.Objects;
+
 public class CreatePotion implements CommandExecutor {
     Plugin plugin = CommandPotion.getPlugin(CommandPotion.class);
     ItemStack potion = new ItemStack(Material.POTION);
@@ -21,6 +23,9 @@ public class CreatePotion implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player){
             if (sender.hasPermission("commandpotions.createpotion")) {
+                if (args[0].equals(null)){
+                    sender.sendMessage(ChatColor.RED + "Invalid arguments. /cpot <potion> <player>");
+                }
                 if (args[0].equalsIgnoreCase("reload")){
                     plugin.reloadConfig();
                     sender.sendMessage(ChatColor.GREEN + "Command Potions has reloaded successfully.");
@@ -28,6 +33,10 @@ public class CreatePotion implements CommandExecutor {
                     return false;
                 }
                 if (args.length >= 1) {
+                    if (plugin.getConfig().getString("potions." + args[0]) == null){
+                        sender.sendMessage(ChatColor.RED + "That potion doesn't exist!");
+                        return false;
+                    }
                     Player p = (Player) sender;
                     potionMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("potions." + args[0] + ".display-name")));
                     if (plugin.getConfig().getString("potions." + args[0] + ".color").equalsIgnoreCase("aqua")) {
