@@ -26,9 +26,8 @@ All of the plugin configuration is done through a simple config:
 
 ## Configuration Explained
 * main-config: #Main settings
-  *show-time-left: #If true gives the player the luck effect (which does nothing) to show how long until the potion will run out. (Will only show the latest potion)
-  
-  *ambient: #If false will show particles from the luck effect
+  * show-time-left: #If true gives the player the luck effect (which does nothing) to show how long until the potion will run out. (Will only show the latest potion)
+  * ambient: #If false will show particles from the luck effect
 
 * particle-config: #Change particle offset/intensity/rate. (Only works with the particle from the potion, not the luck effect)
   * offset-x: #Particle offset x
