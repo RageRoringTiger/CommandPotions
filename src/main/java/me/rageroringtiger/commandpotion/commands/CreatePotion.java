@@ -12,6 +12,7 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class CreatePotion implements CommandExecutor {
@@ -82,6 +83,20 @@ public class CreatePotion implements CommandExecutor {
                     if (plugin.getConfig().getBoolean("main-config.show-time-left")) {
                         potionMeta.addCustomEffect(new PotionEffect(PotionEffectType.LUCK, plugin.getConfig().getInt("potions." + args[0] + ".time"), 0, plugin.getConfig().getBoolean("main-config.ambient")), true);
                     }
+
+                    ArrayList<String> potion_lore = new ArrayList<>();
+                    potion_lore.add("");
+                    potion_lore.add(ChatColor.DARK_PURPLE + "Command(s) on drink:");
+                    for (String command_lore : plugin.getConfig().getStringList("potions." + args[0] + ".command-on-drink")){
+                        potion_lore.add(ChatColor.GOLD + command_lore);
+                    }
+                    potion_lore.add("");
+                    potion_lore.add(ChatColor.DARK_PURPLE + "Command(s) on expire.");
+                    for (String command_lore : plugin.getConfig().getStringList("potions." + args[0] + ".command-on-expire")){
+                        potion_lore.add(ChatColor.GOLD + command_lore);
+                    }
+                    potionMeta.setLore(potion_lore);
+                    potion.setItemMeta(potionMeta);
                     if (args.length > 1) {
                         Player target = Bukkit.getPlayerExact(args[1]);
                         if (target instanceof Player) {
@@ -92,7 +107,6 @@ public class CreatePotion implements CommandExecutor {
                             sender.sendMessage(ChatColor.RED + "That player is not online.");
                         }
                     } else {
-                        potion.setItemMeta(potionMeta);
                         p.getInventory().addItem(potion);
                         p.updateInventory();
                     }
