@@ -56,6 +56,6 @@ All of the plugin configuration is done through a simple config:
 Thanks for checking out my plugin :)
 
 # Download
-[VERSION 1.1](https://github.com/RageRoringTiger/CommandPotions/raw/master/compiled/CommandPotions1-1.jar)
+[VERSION 1.1 (BUGGED)](https://github.com/RageRoringTiger/CommandPotions/raw/master/compiled/CommandPotions1-1.jar)
 
-[VERSION 1.0](https://github.com/RageRoringTiger/CommandPotions/raw/master/compiled/CommandPotions.jar)
+[VERSION 1.0 (WORKING)](https://github.com/RageRoringTiger/CommandPotions/raw/master/compiled/CommandPotions.jar)
