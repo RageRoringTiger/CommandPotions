@@ -63,8 +63,10 @@ Thanks for checking out my plugin :)
 1. FIX BUGS.
 
 # Download
-[VERSION 1.2 (BUGGED)](https://github.com/RageRoringTiger/CommandPotions/raw/master/compiled/CommandPotions1-2.jar)
+[RELEASE 1.0](https://github.com/RageRoringTiger/CommandPotions/raw/master/compiled/CommandPotions1-3.jar)
 
-[VERSION 1.1 (KIND OF WORKING)](https://github.com/RageRoringTiger/CommandPotions/raw/master/compiled/CommandPotions1-1.jar)
+[PRE-RELEASE 0.9](https://github.com/RageRoringTiger/CommandPotions/raw/master/compiled/CommandPotions1-2.jar)
 
-[VERSION 1.0 (WORKING)](https://github.com/RageRoringTiger/CommandPotions/raw/master/compiled/CommandPotions.jar)
+[PRE-RELEASE 0.8](https://github.com/RageRoringTiger/CommandPotions/raw/master/compiled/CommandPotions1-1.jar)
+
+[PRE-RELEASE 0.7](https://github.com/RageRoringTiger/CommandPotions/raw/master/compiled/CommandPotions.jar)
