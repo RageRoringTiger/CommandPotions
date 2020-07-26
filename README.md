@@ -1,4 +1,4 @@
-[(**Top**)](https://github.com/RageRoringTiger/CommandPotions/blob/master/README.md#commandpotions) [(Main Info)](https://github.com/RageRoringTiger/CommandPotions/blob/master/README.md#main-info) [(Commands)](https://github.com/RageRoringTiger/CommandPotions/blob/master/README.md#commands) [(Permissions)](https://github.com/RageRoringTiger/CommandPotions/blob/master/README.md#permissions) [(**Configuration**)](https://github.com/RageRoringTiger/CommandPotions/blob/master/README.md#configuration) [(Main Configuration Info)](https://github.com/RageRoringTiger/CommandPotions/blob/master/README.md#main-configuration-info) [(Configuration Explained)](https://github.com/RageRoringTiger/CommandPotions/blob/master/README.md#configuration-explained) [(**Miscellaneous**)](https://github.com/RageRoringTiger/CommandPotions/blob/master/README.md#miscellaneous) [(Credits/Thanks)](https://github.com/RageRoringTiger/CommandPotions/blob/master/README.md#creditsthanks) [(To-Do)](https://github.com/RageRoringTiger/CommandPotions/blob/master/README.md#to-do)[(Downloads)](https://github.com/RageRoringTiger/CommandPotions/blob/master/README.md#downloads)
+<div align="center">[(**Top**)](https://github.com/RageRoringTiger/CommandPotions/blob/master/README.md#commandpotions) [(Main Info)](https://github.com/RageRoringTiger/CommandPotions/blob/master/README.md#main-info) [(Commands)](https://github.com/RageRoringTiger/CommandPotions/blob/master/README.md#commands) [(Permissions)](https://github.com/RageRoringTiger/CommandPotions/blob/master/README.md#permissions) [(**Configuration**)](https://github.com/RageRoringTiger/CommandPotions/blob/master/README.md#configuration) [(Main Configuration Info)](https://github.com/RageRoringTiger/CommandPotions/blob/master/README.md#main-configuration-info) [(Configuration Explained)](https://github.com/RageRoringTiger/CommandPotions/blob/master/README.md#configuration-explained) [(**Miscellaneous**)](https://github.com/RageRoringTiger/CommandPotions/blob/master/README.md#miscellaneous) [(Credits/Thanks)](https://github.com/RageRoringTiger/CommandPotions/blob/master/README.md#creditsthanks) [(To-Do)](https://github.com/RageRoringTiger/CommandPotions/blob/master/README.md#to-do) [(Downloads)](https://github.com/RageRoringTiger/CommandPotions/blob/master/README.md#downloads)</div>
 # CommandPotions
 **Created by RageRoringTiger**
 
@@ -26,6 +26,7 @@ All of the plugin configuration is done through a simple config:
 
 
 ## Configuration Explained
+```
 * main-config: #Main settings
   * show-time-left: #If true gives the player the luck effect (which does nothing) to show how long until the potion will run out. (Will only show the latest potion)
   * ambient: #If false will show particles from the luck effect
@@ -52,6 +53,7 @@ All of the plugin configuration is done through a simple config:
     * command-on-expire: #The command(s) that are run when the potion runs out. {player} is replaced with the player who drank the potion.
       * (EX) say The potion has run out
       * (EX) kill {player}
+```      
 
 # Miscellaneous
 ## Credits/Thanks
