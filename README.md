@@ -60,6 +60,7 @@ Thanks for checking out my plugin :)
 ## To-Do
 1. Add lore to potions that shows what commands are run.
 1. Create in game command potion creator GUI.
+1. Add more command variables (like {player}).
 1. FIX BUGS.
 
 # Download
