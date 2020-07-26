@@ -20,11 +20,13 @@ public class CreatePotion implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player){
-            if (args[0].equalsIgnoreCase("reload")){
-                plugin.reloadConfig();
-                return false;
-            }
             if (sender.hasPermission("commandpotions.createpotion")) {
+                if (args[0].equalsIgnoreCase("reload")){
+                    plugin.reloadConfig();
+                    sender.sendMessage(ChatColor.GREEN + "Command Potions has reloaded successfully.");
+                    Bukkit.getConsoleSender().sendMessage(ChatColor.GREEN + "Command Potions has reload successfully.");
+                    return false;
+                }
                 if (args.length >= 1) {
                     Player p = (Player) sender;
                     potionMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("potions." + args[0] + ".display-name")));
@@ -88,6 +90,8 @@ public class CreatePotion implements CommandExecutor {
                 } else {
                     sender.sendMessage(ChatColor.RED + "Useage: /cpot <potion> <player>");
                 }
+            } else {
+                sender.sendMessage(ChatColor.RED + "You don't have permission to use that command.");
             }
         } else {
             sender.sendMessage(ChatColor.RED + "You must be a player.");
